@@ -17,7 +17,7 @@ function oria_customize_register( $wp_customize ) {
     $wp_customize->get_section( 'header_image' )->panel         = 'oria_header_panel';
     $wp_customize->get_section( 'title_tagline' )->priority     = '9';
     $wp_customize->get_section( 'title_tagline' )->title        = __('Site branding', 'oria');
-    $wp_customize->get_section( 'title_tagline' )->panel        = 'oria_header_panel';    
+    $wp_customize->get_section( 'title_tagline' )->panel        = 'oria_header_panel';
     $wp_customize->remove_control( 'header_textcolor' );
     $wp_customize->remove_control( 'display_header_text' );
 
@@ -43,9 +43,9 @@ function oria_customize_register( $wp_customize ) {
                     'selected'          => $this->value(),
                 )
             );
- 
+
             $dropdown = str_replace( '<select', '<select ' . $this->get_link(), $dropdown );
- 
+
             printf(
                 '<label class="customize-control-select"><span class="customize-control-title">%s</span> %s</label>',
                 $this->label,
@@ -119,7 +119,7 @@ function oria_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '200',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'logo_size', array(
         'type'        => 'number',
@@ -162,7 +162,7 @@ function oria_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '75',
-        )       
+        )
     );
     $wp_customize->add_control( 'branding_padding', array(
         'type'        => 'number',
@@ -190,8 +190,8 @@ function oria_customize_register( $wp_customize ) {
         'carousel_display_front',
         array(
             'sanitize_callback' => 'oria_sanitize_checkbox',
-            'default' => 0,         
-        )       
+            'default' => 0,
+        )
     );
     $wp_customize->add_control(
         'carousel_display_front',
@@ -199,7 +199,7 @@ function oria_customize_register( $wp_customize ) {
             'type' => 'checkbox',
             'label' => __('Show carousel on front page?', 'oria'),
             'section' => 'oria_carousel',
-            'priority' => 8,           
+            'priority' => 8,
         )
     );
     //Display: Home and archives
@@ -207,8 +207,8 @@ function oria_customize_register( $wp_customize ) {
         'carousel_display_archives',
         array(
             'sanitize_callback' => 'oria_sanitize_checkbox',
-            'default' => 1,         
-        )       
+            'default' => 1,
+        )
     );
     $wp_customize->add_control(
         'carousel_display_archives',
@@ -216,7 +216,7 @@ function oria_customize_register( $wp_customize ) {
             'type' => 'checkbox',
             'label' => __('Show carousel on blog index/archives/etc?', 'oria'),
             'section' => 'oria_carousel',
-            'priority' => 9,           
+            'priority' => 9,
         )
     );
     //Display: Singular
@@ -224,8 +224,8 @@ function oria_customize_register( $wp_customize ) {
         'carousel_display_singular',
         array(
             'sanitize_callback' => 'oria_sanitize_checkbox',
-            'default' => 0,         
-        )       
+            'default' => 0,
+        )
     );
     $wp_customize->add_control(
         'carousel_display_singular',
@@ -233,15 +233,15 @@ function oria_customize_register( $wp_customize ) {
             'type' => 'checkbox',
             'label' => __('Show carousel on single posts and pages?', 'oria'),
             'section' => 'oria_carousel',
-            'priority' => 10,           
+            'priority' => 10,
         )
-    );    
+    );
     //Category
     $wp_customize->add_setting( 'carousel_cat', array(
         'default'           => '',
         'sanitize_callback' => 'absint',
     ) );
-    
+
     $wp_customize->add_control( new oria_Categories_Dropdown( $wp_customize, 'carousel_cat', array(
         'label'     => __('Select which category to show in the carousel', 'oria'),
         'section'   => 'oria_carousel',
@@ -264,7 +264,7 @@ function oria_customize_register( $wp_customize ) {
             'type'      => 'text',
             'priority'  => 13
         )
-    );         
+    );
     //Number of posts
     $wp_customize->add_setting(
         'carousel_number',
@@ -289,12 +289,12 @@ function oria_customize_register( $wp_customize ) {
             'title' => __('Blog options', 'oria'),
             'priority' => 13,
         )
-    );  
+    );
     // Blog layout
     $wp_customize->add_setting('oria_options[info]', array(
             'type'              => 'info_control',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_attr',            
+            'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control( new Oria_Info( $wp_customize, 'layout', array(
@@ -309,7 +309,7 @@ function oria_customize_register( $wp_customize ) {
         'fullwidth_single',
         array(
             'sanitize_callback' => 'oria_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'fullwidth_single',
@@ -324,7 +324,7 @@ function oria_customize_register( $wp_customize ) {
     $wp_customize->add_setting('oria_options[info]', array(
             'type'              => 'info_control',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_attr',            
+            'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control( new Oria_Info( $wp_customize, 'content', array(
@@ -333,14 +333,14 @@ function oria_customize_register( $wp_customize ) {
         'settings' => 'oria_options[info]',
         'priority' => 13
         ) )
-    );          
+    );
     //Excerpt
     $wp_customize->add_setting(
         'exc_lenght',
         array(
             'sanitize_callback' => 'absint',
             'default'           => '35',
-        )       
+        )
     );
     $wp_customize->add_control( 'exc_lenght', array(
         'type'        => 'number',
@@ -371,12 +371,12 @@ function oria_customize_register( $wp_customize ) {
             'type'      => 'text',
             'priority'  => 17
         )
-    );      
+    );
     //Meta
     $wp_customize->add_setting('oria_options[info]', array(
             'type'              => 'info_control',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_attr',            
+            'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control( new Oria_Info( $wp_customize, 'meta', array(
@@ -385,14 +385,14 @@ function oria_customize_register( $wp_customize ) {
         'settings' => 'oria_options[info]',
         'priority' => 18
         ) )
-    ); 
+    );
     //Hide meta index
     $wp_customize->add_setting(
       'hide_meta_index',
       array(
         'sanitize_callback' => 'oria_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'hide_meta_index',
@@ -408,8 +408,8 @@ function oria_customize_register( $wp_customize ) {
       'hide_meta_single',
       array(
         'sanitize_callback' => 'oria_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'hide_meta_single',
@@ -424,7 +424,7 @@ function oria_customize_register( $wp_customize ) {
     $wp_customize->add_setting('oria_options[info]', array(
             'type'              => 'info_control',
             'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'esc_attr',            
+            'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control( new Oria_Info( $wp_customize, 'images', array(
@@ -433,13 +433,13 @@ function oria_customize_register( $wp_customize ) {
         'settings' => 'oria_options[info]',
         'priority' => 21
         ) )
-    );     
+    );
     //Index images
     $wp_customize->add_setting(
         'index_feat_image',
         array(
             'sanitize_callback' => 'oria_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'index_feat_image',
@@ -455,7 +455,7 @@ function oria_customize_register( $wp_customize ) {
         'post_feat_image',
         array(
             'sanitize_callback' => 'oria_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'post_feat_image',
@@ -509,7 +509,7 @@ function oria_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 12
         )
-    );   
+    );
     //Headings fonts
     $wp_customize->add_setting(
         'headings_font_name',
@@ -551,7 +551,7 @@ function oria_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '62',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'site_title_size', array(
         'type'        => 'number',
@@ -564,7 +564,7 @@ function oria_customize_register( $wp_customize ) {
             'step'  => 1,
             'style' => 'margin-bottom: 15px; padding: 10px;',
         ),
-    ) ); 
+    ) );
     // Site description
     $wp_customize->add_setting(
         'site_desc_size',
@@ -572,7 +572,7 @@ function oria_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '18',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'site_desc_size', array(
         'type'        => 'number',
@@ -585,14 +585,14 @@ function oria_customize_register( $wp_customize ) {
             'step'  => 1,
             'style' => 'margin-bottom: 15px; padding: 10px;',
         ),
-    ) );         
+    ) );
     //H1 size
     $wp_customize->add_setting(
         'h1_size',
         array(
             'sanitize_callback' => 'absint',
             'default'           => '38',
-        )       
+        )
     );
     $wp_customize->add_control( 'h1_size', array(
         'type'        => 'number',
@@ -612,7 +612,7 @@ function oria_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '30',
-        )       
+        )
     );
     $wp_customize->add_control( 'h2_size', array(
         'type'        => 'number',
@@ -632,7 +632,7 @@ function oria_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '24',
-        )       
+        )
     );
     $wp_customize->add_control( 'h3_size', array(
         'type'        => 'number',
@@ -652,7 +652,7 @@ function oria_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '18',
-        )       
+        )
     );
     $wp_customize->add_control( 'h4_size', array(
         'type'        => 'number',
@@ -672,7 +672,7 @@ function oria_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '14',
-        )       
+        )
     );
     $wp_customize->add_control( 'h5_size', array(
         'type'        => 'number',
@@ -692,7 +692,7 @@ function oria_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '12',
-        )       
+        )
     );
     $wp_customize->add_control( 'h6_size', array(
         'type'        => 'number',
@@ -713,7 +713,7 @@ function oria_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '15',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'body_size', array(
         'type'        => 'number',
@@ -789,7 +789,7 @@ function oria_customize_register( $wp_customize ) {
                 'priority' => 19
             )
         )
-    ); 
+    );
     //Body
     $wp_customize->add_setting(
         'body_text_color',
@@ -810,7 +810,7 @@ function oria_customize_register( $wp_customize ) {
                 'priority' => 22
             )
         )
-    ); 
+    );
 
 
     //___Footer___//
@@ -899,3 +899,13 @@ function oria_customize_preview_js() {
 	wp_enqueue_script( 'oria_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'oria_customize_preview_js' );
+
+function oria_registers() {
+	wp_enqueue_script( 'oria_customizer_script', get_template_directory_uri() . '/js/oria_customizer.js', array("jquery"), '20120206', true  );
+
+	wp_localize_script( 'oria_customizer_script', 'oriaCustomizerObject', array(
+		'github'				=> __('GitHub','oria'),
+		'review'				=> __('Leave a Review', 'oria')
+	) );
+}
+add_action( 'customize_controls_enqueue_scripts', 'oria_registers' );
