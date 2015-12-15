@@ -213,7 +213,7 @@ function oria_footer_credits() {
 		printf( __( 'Proudly powered by %s', 'oria' ), 'WordPress' );
 	echo '</a>';
 	echo '<span class="sep"> | </span>';
-	printf( __( 'Theme: %2$s by %1$s.', 'oria' ), 'FlyFreeMedia', '<a href="http://flyfreemedia.com/themes/oria" rel="designer">Oria</a>' );
+	printf( __( 'Theme: %2$s by %1$s.', 'oria' ), 'JustFreeThemes', '<a href="http://justfreethemes.com/oria" rel="nofollow">Oria</a>' );
 }
 add_action( 'oria_footer', 'oria_footer_credits' );
 
