@@ -209,7 +209,7 @@ add_filter('body_class', 'oria_fullwidth_singles');
  */
 
 function oria_footer_credits() {
-	echo '<a href="' . esc_url( __( 'http://wordpress.org/', 'oria' ) ) . '">';
+	echo '<a href="' . esc_url( __( 'http://wordpress.org/', 'oria' ) ) . '" rel="nofollow">';
 		printf( __( 'Proudly powered by %s', 'oria' ), 'WordPress' );
 	echo '</a>';
 	echo '<span class="sep"> | </span>';
