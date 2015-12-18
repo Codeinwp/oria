@@ -1,8 +1,8 @@
 /*
 Theme Name: Oria
-Theme URI: http://flyfreemedia.com/themes/oria
-Author: FlyFreeMedia
-Author URI: http://flyfreemedia.com
+Theme URI: http://justfreethemes.com/oria
+Author: JustFreeThemes
+Author URI: http://justfreethemes.com
 Description: Oria is a responsive masonry theme that lets you tell your stories in a clean and modern environment. Some of the features are: parallax header image, social menu, custom colors, easy access to all Google Fonts, a built-in featured posts carousel. A full demo is available here: http://demo.flyfreemedia.com/oria
 Version: 1.01
 License: GNU General Public License v2 or later
@@ -220,7 +220,7 @@ a:active {
 	position: relative;
 	text-transform: uppercase;
 	z-index: 11;
-	font-family: 'Oswald', sans-serif;	
+	font-family: 'Oswald', sans-serif;
 	font-size: 16px;
 }
 
@@ -279,7 +279,7 @@ a:active {
 .main-navigation ul ul li {
 	text-transform: none;
 	font-weight: 400;
-	font-family: 'Lato', sans-serif;	
+	font-family: 'Lato', sans-serif;
 	font-size: 14px;
 }
 
@@ -408,7 +408,7 @@ a:active {
 .nav-next a {
 	text-decoration: none;
 	-webkit-transition: color 0.3s;
-	transition: color 0.3s;	
+	transition: color 0.3s;
 }
 .nav-previous:hover,
 .nav-next:hover {
@@ -534,7 +534,7 @@ a:active {
 }
 .widget_pages li::before {
 	content: '\f016';
-	margin-right: 8px;	
+	margin-right: 8px;
 }
 .widget_recent_comments li::before {
 	content: '\f0e5';
@@ -604,7 +604,7 @@ a:active {
 }
 .entry-title a:hover {
 	color: #ef997f;
-}	
+}
 
 .blog-entry-header .entry-title {
 	font-size: 28px;
@@ -653,14 +653,14 @@ a:active {
 	display: table;
 	text-align: center;
 	border: 1px solid;
-	color: #EF997F;	
+	color: #EF997F;
 	padding: 5px 10px;
 	margin: 30px auto 0;
 	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
 .read-more:hover {
-	background-color: #EF997F;	
+	background-color: #EF997F;
 	color: #fff;
 	text-decoration: none;
 }
@@ -731,7 +731,7 @@ a:active {
 	background-color: #fff;
 	font-size: 12px;
 	-webkit-transition: all 0.4s;
-	transition: all 0.4s;	
+	transition: all 0.4s;
 }
 a.comment-reply-link {
 	text-decoration: none;
@@ -894,7 +894,7 @@ img {
 	list-style: none;
 	line-height: 1;
 	-webkit-transition: background-color 0.4s;
-	transition: background-color 0.4s;	
+	transition: background-color 0.4s;
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 .no-toggle .social-navigation li:last-of-type {
@@ -908,7 +908,7 @@ img {
 	display: block;
 	color: #fff;
 	-webkit-transition: all 0.3s;
-	transition: all 0.3s;	
+	transition: all 0.3s;
 	padding: 15px 0;
 }
 .social-navigation li a::before {
@@ -996,7 +996,7 @@ img {
 	cursor: pointer;
 	font-size: 20px;
 	margin-bottom: 15px;
-	color: #333;	
+	color: #333;
 }
 .widget-area-visible {
 	left: 0;
@@ -1117,7 +1117,7 @@ Slider
 	-o-transition: height 500ms ease-in-out;
 	transition: height 500ms ease-in-out;
 }
-	
+
 .owl-carousel .owl-item{
 	float: left;
 }
@@ -1384,7 +1384,7 @@ Slider
 @media only screen and (max-width: 1024px) {
 	.main-navigation {
 		display: none;
-	}	
+	}
 	.mobile-nav {
 		display: block;
 		background-color: #1c1c1c;
@@ -1395,7 +1395,7 @@ Slider
 		width: 100%;
 		margin-right: 0;
 		padding: 0;
-	}	
+	}
 	.posts-layout .hentry {
 		width: 50%;
 	}
@@ -1432,7 +1432,7 @@ Slider
 	}
 	.owl-carousel .owl-item {
 		padding: 0 15px;
-	}	
+	}
 	h1 {
 		font-size: 26px !important;
 	}
