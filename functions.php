@@ -273,7 +273,7 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load the slider
  */
-require get_template_directory() . '/inc/slider.php';
+require get_stylesheet_directory() . '/inc/slider.php';
 
 /**
  * Styles
