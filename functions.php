@@ -278,7 +278,7 @@ require get_template_directory() . '/inc/slider.php';
 /**
  * Styles
  */
-require get_template_directory() . '/inc/styles.php';
+require get_stylesheet_directory() . '/inc/styles.php';
 
 /**
  *TGM Plugin activation.
