@@ -742,7 +742,7 @@ function oria_customize_register( $wp_customize ) {
             $wp_customize,
             'primary_color',
             array(
-                'label'         => __('Primary color', 'amadeus'),
+                'label'         => 'Primary color',
                 'section'       => 'colors',
                 'settings'      => 'primary_color',
                 'priority'      => 12
@@ -763,7 +763,7 @@ function oria_customize_register( $wp_customize ) {
             $wp_customize,
             'site_title_color',
             array(
-                'label' => __('Site title', 'amadeus'),
+                'label' => 'Site title',
                 'section' => 'colors',
                 'settings' => 'site_title_color',
                 'priority' => 18
@@ -784,7 +784,7 @@ function oria_customize_register( $wp_customize ) {
             $wp_customize,
             'site_desc_color',
             array(
-                'label' => __('Site description', 'amadeus'),
+                'label' => 'Site description',
                 'section' => 'colors',
                 'priority' => 19
             )
@@ -804,7 +804,7 @@ function oria_customize_register( $wp_customize ) {
             $wp_customize,
             'body_text_color',
             array(
-                'label' => __('Body text', 'amadeus'),
+                'label' => 'Body text',
                 'section' => 'colors',
                 'settings' => 'body_text_color',
                 'priority' => 22
