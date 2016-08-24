@@ -148,7 +148,8 @@ function oria_scripts() {
 
 	wp_enqueue_script( 'oria-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), true );
 
-	wp_enqueue_script( 'jquery-masonry');
+	wp_enqueue_script( 'jquery');
+	wp_enqueue_script( 'masonry');
 
 	wp_enqueue_script( 'oria-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), true );
 
