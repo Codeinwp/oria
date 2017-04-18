@@ -148,10 +148,7 @@ function oria_scripts() {
 
 	wp_enqueue_script( 'oria-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), true );
 
-	wp_enqueue_script( 'jquery');
-	wp_enqueue_script( 'masonry');
-
-	wp_enqueue_script( 'oria-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), true );
+	wp_enqueue_script( 'oria-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jquery-masonry'), true );
 
 	wp_enqueue_script( 'oria-masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array(), true );
 
