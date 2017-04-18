@@ -240,10 +240,12 @@ add_filter('excerpt_more', 'oria_excerpt_more');
 /**
  * Top bar class
 */
-function oria_sidebar_mode() {
-    if ( is_singular() || !is_active_sidebar( 'sidebar-1' ) ) {
-    	echo 'no-toggle';
-    }
+if ( ! function_exists( 'oria_sidebar_mode' ) ) {
+	function oria_sidebar_mode() {
+	    if ( is_singular() || !is_active_sidebar( 'sidebar-1' ) ) {
+		echo 'no-toggle';
+	    }
+	}
 }
 
 /**
