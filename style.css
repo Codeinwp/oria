@@ -981,7 +981,7 @@ img {
 	-webkit-transition: all 0.8s;
 	transition: all 0.8s;
 	overflow-y: auto;
-	z-index: 99;
+	z-index: 11;
 }
 .widget-area.no-toggle {
 	position: relative;
