@@ -83,6 +83,22 @@ function oria_customize_register( $wp_customize ) {
             )
         )
     );
+    //Disable Preloader
+    $wp_customize->add_setting(
+        'oria_disable_preloader',
+        array(
+            'sanitize_callback' => 'oria_sanitize_checkbox',
+        )
+    );
+    $wp_customize->add_control(
+        'oria_disable_preloader',
+        array(
+            'type' => 'checkbox',
+            'label' => esc_html__( 'Disable preloader?','oria' ),
+            'section' => 'oria_general',
+            'priority'    => 11,
+        )
+    );
     //___Header area___//
     $wp_customize->add_panel( 'oria_header_panel', array(
         'priority'       => 10,

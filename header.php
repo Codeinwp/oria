@@ -22,11 +22,25 @@
 
 <body <?php body_class(); ?>>
 
-<div class="preloader">
-	<div id="preloader-inner">
-		<div class="preload"></div>
-	</div>
-</div>
+<?php
+
+if ( ! is_customize_preview() ) :
+
+    $oria_disable_preloader = get_theme_mod( 'oria_disable_preloader' );
+
+    if ( isset( $oria_disable_preloader ) && ($oria_disable_preloader != 1) ) :
+
+        echo '<div class="preloader">';
+        echo '<div id="preloader-inner">';
+        echo '<div class="preload">&nbsp;</div>';
+        echo '</div>';
+        echo '</div>';
+
+    endif;
+
+endif;
+
+?>
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'oria' ); ?></a>
