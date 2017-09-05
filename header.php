@@ -24,9 +24,7 @@
 
 <?php
 
-global $wp_customize;
-
-if ( ! isset( $wp_customize ) ) :
+if ( ! is_customize_preview() ) :
 
     $oria_disable_preloader = get_theme_mod( 'oria_disable_preloader' );
 

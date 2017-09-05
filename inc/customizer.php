@@ -88,8 +88,6 @@ function oria_customize_register( $wp_customize ) {
         'oria_disable_preloader',
         array(
             'sanitize_callback' => 'oria_sanitize_checkbox',
-            'default' => 1,
-
         )
     );
     $wp_customize->add_control(
@@ -97,7 +95,6 @@ function oria_customize_register( $wp_customize ) {
         array(
             'type' => 'checkbox',
             'label' => esc_html__( 'Disable preloader?','oria' ),
-            'description' => esc_html__( 'If this box is checked, the preloader will be disabled from homepage.','oria' ),
             'section' => 'oria_general',
             'priority'    => 11,
         )
