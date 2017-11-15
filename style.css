@@ -956,6 +956,18 @@ img {
 .social-navigation li a[href*="tumblr.com"]::before {
 	content: '\f173';
 }
+.social-navigation li a[href*="telegram.me"]::before {
+	content: '\f2c6';
+}
+.social-navigation li a[href^="tel:"]::before {
+	content: '\f095';
+}
+.social-navigation li a[href*="github.com"]::before {
+	content: '\f09b';
+}
+.social-navigation li a[href^="mailto:"]::before {
+	content: '\f0e0';
+}
 /*--------------------------------------------------------------
 ## Sidebar toggle
 --------------------------------------------------------------*/
