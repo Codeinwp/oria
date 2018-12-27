@@ -306,7 +306,14 @@ function oria_register_required_plugins() {
 				'name'     => 'Pirate Forms',
 				'slug' 	   => 'pirate-forms',
 				'required' => false
-			));
+			),
+
+			array(
+				'name'     => 'Orbit Fox',
+				'slug' 	   => 'themeisle-companion',
+				'required' => false
+			)
+		);
 
 	$config = array(
         'default_path' => '',
