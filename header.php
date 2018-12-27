@@ -70,8 +70,11 @@ endif;
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'menu clearfix', ) ); ?>
 		</nav><!-- #site-navigation -->
-		<nav class="mobile-nav"></nav>
-
+		<nav class="mobile-nav">
+    <?php if (function_exists('max_mega_menu_is_enabled') && max_mega_menu_is_enabled('primary') ) : ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+    <?php endif; ?>
+</nav>
 	</header><!-- #masthead -->
 	
 	<?php if ( ( get_theme_mod('carousel_display_front') && is_front_page() ) || ( get_theme_mod('carousel_display_archives', '1') && ( is_home() || is_archive() ) ) || ( ( get_theme_mod('carousel_display_singular') && is_singular() ) ) ) : ?>
