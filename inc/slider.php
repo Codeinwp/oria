@@ -47,11 +47,12 @@
 					<div class="slider-inner">
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 						<div class="slide">
+							<?php echo sprintf('<a href="%s" rel="bookmark">', esc_url(get_permalink())); ?>
 							<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( 'oria-carousel' ); ?>
 							<?php else : ?>
 								<?php echo '<img src="' . get_stylesheet_directory_uri() . '/images/placeholder.png"/>'; ?>
-							<?php endif; ?>
+							<?php endif; ?></a>
 							<?php the_title( sprintf( '<h3 class="slide-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 						</div>
 					<?php endwhile; ?>
